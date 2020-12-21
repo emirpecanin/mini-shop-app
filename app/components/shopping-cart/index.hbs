@@ -1,0 +1,9 @@
+<h3 class="cart-title">Products in cart:</h3>
+{{#each this.products as |product|}}
+  <Product 
+    @storePage={{false}}
+    @product={{product}}
+  />
+{{/each}}
+
+<span class="grand-total">Total: {{this.grandtotal}}</span>

@@ -1,0 +1,26 @@
+<div class="product">
+  <span class="name">
+    {{@product.name}}
+  </span>
+  
+  
+  
+  <span class="price">
+    ${{@product.price}}
+  </span>
+  
+  {{#if @product.amount}}
+    <span class="amount"> x {{@product.amount}}  </span>
+  {{/if}}
+
+  {{yield}}
+  {{#if @storePage}}
+    <button 
+      type="button" 
+      class="add-to-cart"
+      {{on 'click' this.addItem}}  
+    >Add to cart</button>
+    {{else}}
+    <span class="total">${{this.total}}</span>
+  {{/if}}
+</div>

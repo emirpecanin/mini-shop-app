@@ -1,0 +1,46 @@
+{{#if this.grandTotal}}
+<div class="user-input">
+  <form class="user-form" {{on 'submit' this.order}}>
+    <div class="form-row">
+      <label for="name">Name</label>
+      <Input @value={{this.name}} required="required"/>
+    </div>
+    <div class="form-row">
+      <label for="email">Email:</label>
+      <Input @value={{this.email}} type="email" required="required"/>
+    </div>
+    <div class="form-row">
+      <label for="adress">Adress</label>
+      <Input @value={{this.adress}} required="required"/>
+    </div>
+    <div class="form-row">
+      <label for="city">City/State</label>
+      <Input @value={{this.city}} required="required"/>
+    </div>
+    <button type="submit">Order</button>
+  </form>
+  <div class="user-info">
+    <h3>
+      Information:
+    </h3>
+    <div class="user-name">
+        <span class="user-info-label">Name</span> 
+          {{this.name}}
+    </div>
+    <div class="user-email">
+        <span class="user-info-label">Email</span> 
+          {{this.email}}
+    </div>
+    <div class="user-adress">
+        <span class="user-info-label">Adress</span> 
+          {{this.adress}}
+    </div>
+    <div class="user-city">
+        <span class="user-info-label">City</span> 
+          {{this.city}}
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor perspiciatis iusto ipsa neque aspernatur deleniti obcaecati sunt ab! Sed, minus!</p>
+  </div>
+</div>
+{{/if}}
+

@@ -1,0 +1,21 @@
+<div class="navigation">
+    <ul>
+      <li>
+        <LinkTo 
+          @route="index" 
+         >
+          Store 
+        </LinkTo>
+      </li>
+    </ul>
+    <LinkTo 
+      @route="cart"
+      class="cart">
+      <FaIcon @icon="shopping-cart" @prefix="fas" class="cart-icon"/>
+      {{#if @items}}
+        <span class="cart-items" >{{@items}}</span>
+      {{/if}}
+
+
+    </LinkTo>
+</div>

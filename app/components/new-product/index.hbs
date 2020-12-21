@@ -1,0 +1,15 @@
+<form class="add-new-item" {{on 'submit' this.addNewProduct}}>
+  <Input 
+    @value={{this.name}}
+    type="text" 
+    name="name" 
+    required="required" 
+    placeholder="Product name"/>
+  <Input 
+    @value={{this.price}}
+    type="number" 
+    name="price" 
+    required="required" 
+    placeholder="Price"/>
+  <button type="submit">Add</button>
+</form>

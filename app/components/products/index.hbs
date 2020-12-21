@@ -1,0 +1,12 @@
+<NewProduct 
+  @addItem={{this.addItem}}
+/>
+
+{{#each this.products as |product|}} 
+    <Product 
+      @storePage={{true}}
+      @product={{product}}
+    />
+  {{else}}
+    <div>No Products available</div>
+{{/each}}
